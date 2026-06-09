@@ -28,7 +28,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withCredentials([string(credentialsId: 'Sonar_Token', variable: 'SONAR_TOKEN')]) {
-                    sh "sonar-scanner -Dsonar.host.url=${http://65.0.139.12:9000} -Dsonar.login=${SONAR_TOKEN}"
+                    sh "sonar-scanner -Dsonar.host.url=${SONAR_HOST_URL}-Dsonar.login=${SONAR_TOKEN}"
                 }
             }
         }
