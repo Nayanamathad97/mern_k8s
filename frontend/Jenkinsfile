@@ -23,7 +23,7 @@ pipeline {
     }
 
  
-
+    stages{
         
         stage('SonarQube Analysis') {
             steps {
@@ -32,9 +32,8 @@ pipeline {
                 }
             }
         }
-
-        
-       
+   
+    }  
         
     
 
